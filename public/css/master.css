@@ -1,0 +1,17 @@
+header {
+  font-size: 1.5em;
+}
+.part-01 tr:nth-child(2n+2) {
+  background-color: #f4f4f4;
+}
+.part-01 tr:nth-child(2){
+  background-color: #49e76c;
+}
+
+#color-cube{
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}

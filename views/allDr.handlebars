@@ -1,0 +1,40 @@
+
+  <div class="row">
+    <div class="part-01">
+      <h2>Autoescuelas</h2>
+      <table class="table">
+        <tr>
+          <form id="form-editDr" action="/" method="post">
+            <td><input type="text" name="name" placeholder="Nueva Autoescuela"></td>
+            <td><input type="text" name="location" placeholder="Dirección"></td>
+            <td><input type="text" name="tlf" placeholder="Telefono"></td>
+            <td><input type="text" name="email" placeholder="Email"></td>
+            <td><input type="text" name="admin" placeholder="Admin"></td>
+            <td><textarea form="form-editDr" name="logs" placeholder="Logs"></textarea></td>
+            <td><textarea form="form-editDr" name="note" placeholder="Notas"></textarea>
+            <br><input type="submit" name="" placeholder="Enviar"></td>
+          </form>
+        </tr>
+        <tr>
+          <td>Nombre</td>
+          <td>Dirección</td>
+          <td>Teléfono</td>
+          <td>Email</td>
+          <td>Admin</td>
+          <td>logs</td>
+          <td>Notas</td>
+          </tr>
+        {{#each alldr}}
+        <tr style='background-color: {{colorline}} !important'>
+          <td>  <a href="/{{_id}}">{{name}}</a></td>
+          <td>{{location}}</td>
+          <td>{{tlf}}</td>
+          <td>{{email}}</td>
+          <td>{{admin}}</td>
+          <td>{{logs}}</td>
+          <td>{{note}}</td>
+        </tr>
+        {{/each}}
+      </table>
+    </div>
+  </div>

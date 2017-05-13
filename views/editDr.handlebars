@@ -1,0 +1,48 @@
+
+  <div class="row">
+      <div class="">
+        <h2>Editar Autoescuela</h2>
+
+        <table class="all-dr">
+          <tr>
+            <td>Nombre</td>
+            <td>Dirección</td>
+            <td>Teléfono</td>
+            <td>Email</td>
+            <td>Admin</td>
+            <td>Log</td>
+            <td>Notas</td>
+            <td>Color: <div id='color-cube' style="background-color : {{colorline}}"></div></td>
+          </tr>
+          <tr>
+            <form action="/{{_id}}" method="post" id="form-editDr">
+              <td> <input type="text" name="name" value="{{name}}"></td>
+              <td> <input type="text" name="location" value="{{location}}"></td>
+              <td> <input type="text" name="tlf" value="{{tlf}}"></td>
+              <td> <input type="text" name="email" value="{{email}}"></td>
+              <td> <input type="text" name="admin" value="{{admin}}"></td>
+              <td><textarea form="form-editDr" name="logs" >{{logs}}</textarea></td>
+              <td><textarea form="form-editDr" name="note" >{{note}}</textarea></td>
+              <td>
+                <select name="colorline" form="form-editDr">
+                  <option value="#ffffff">Blanco</option>
+                  <option value="#8fd956">Verde</option>
+                  <option value="#e9d865">Amarillo</option>
+                  <option value="#d66464">Rojo</option>
+                </select>
+              </td>
+          </tr>
+          <tr>
+            <td><input type="submit" placeholder="Enviar"></td>
+            </form>
+            {{#if deleted}}
+            {{else}}
+              <td><a href="/delete/{{_id}}"><button type="button">Eliminar</button></a></td>
+            {{/if}}
+          </tr>
+        </table>
+      </div>
+      <div>
+
+      </div>
+  </div>
